@@ -1,0 +1,99 @@
+$color1:#F5EDED;
+$color2:#D72323;
+$color3:#3E3636;
+$color4:black;
+
+.movie{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px;
+
+    &_Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.747);
+        max-width: 230px;
+        min-width: 230px;
+        min-height: 350px;
+        max-height: 350px;
+        border-top:  $color3 9px double;
+        border-bottom: $color3 9px double;
+        margin-bottom: 40px;
+        margin-right: 20px;
+       
+        &_img{
+            max-width: 230px;
+            min-width: 230px;
+            min-height: 300px;
+            max-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            border-left: 1px solid $color4;
+            border-right: 1px solid $color4;
+            &_1{
+             width: 100%;
+             height: 100%
+            }
+        }
+
+        &_cuerpo{
+            max-width: 230px;
+            min-width: 230px;
+            min-height: 50px;
+            max-height: 50px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            border-left: 1px solid $color4;
+            border-right: 1px solid $color4;
+            overflow: hidden;
+           
+        }
+    }
+
+    &_Container:hover{
+        background-color: black;
+        z-index: -0.3;
+        transform: translateX(-3px) translateY(-4px);
+        transition: all .2s ease-in-out;
+        box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.644)
+    }
+}
+
+.btnO{
+    background-color:transparent;
+    border: none;
+    margin-left: 60%; 
+}
+
+.i{
+    color: &$color2;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 5%;
+}
+.i:hover{
+    color: rgb(209, 38, 38);
+}
+.i:active{
+    color: rgb(128, 9, 9) ;
+}
+.h4{
+    color: $color1;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.h4:active{
+    color: $color2
+    
+}
+

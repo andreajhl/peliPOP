@@ -1,0 +1,54 @@
+$color1:#F5EDED;
+$color2:#D72323;
+$color3:#3E3636;
+$color4:black;
+
+
+.movie-detail{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-left: 20px dotted $color2;
+    border-right: 20px dotted $color2;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    
+    &_img{
+        max-height: 400px;
+        min-height: 400px;
+        border-right:3px solid black;
+    }
+
+    &_cuerpo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color:rgba(0, 0, 0, 0.747);
+        min-height:400px; 
+        max-height:400px; 
+        color: $color1;
+
+        &_i{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 14px;
+        }
+    }
+}
+
+.movie-det{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    max-width: 550px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid $color2;
+    color: $color1;
+    line-height: 180%;
+}
