@@ -7,7 +7,11 @@
     border-bottom: 4px solid black;
     height: 90px;
     width: 100%;
+    @media #{$tablet}{
+        height: 60px;
+    }
     @media #{$smarphone}{
+        height: 70px;
         border-bottom: 2px solid black;
     }
 }
@@ -18,6 +22,9 @@
 .fm{
     @include caja-flex (flex,row,center,center,nowrap);
     margin-left: 20px;
+    @media #{$smarmini} {
+        margin-left: 10px;
+    }
 }
 .btn{
     background-color: #3E3636;
@@ -29,14 +36,19 @@
     font-size: 20px;
     cursor: pointer;
     @media #{$smarphone} {
-        min-width: 30px;
-        min-height: 25px;
-        font-size: 10px;
+        min-width: 20px;
+        min-height: 20px;
+        font-size: 8px;
     }
     @media #{$tablet} {
         min-width: 30px;
         min-height: 25px;
         font-size: 10px;
+    }
+    @media #{$smarmini} {
+        min-width: 15px;
+        font-size: 6px;
+        min-height: 15px;
     }
 }
 .btn:active{
@@ -50,9 +62,15 @@
     width: 280px;
     min-height: 35px;
     font-size: 16px;
+    @media #{$smarmini} {
+        min-height: 12px;
+        width: 100%;
+        font-size: 8px;
+    }
     @media #{$smarphone} {
         width: 100%;
-        min-height: 20px;
+        min-height: 18px;
+        font-size: 10px;
     }
     @media #{$tablet} {
         width: 100%;
@@ -68,6 +86,10 @@
     margin: 20px;
     text-decoration: none;
     font-size: 30px;
+    @media #{$smarmini} {
+        font-size: 10px;
+        margin: 8px;
+    }
     @media #{$smarphone} {
        font-size: 15px;
     }

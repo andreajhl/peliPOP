@@ -5,7 +5,8 @@ $color4:black;
 
 $heithImg: 400px;
 
-$smarphone:"(max-width: 480px)";
+$smarmini:"(max-width: 280px)";
+$smarphone:"(min-width:280px) and (max-width: 480px)";
 $tablet:"(min-width:480px) and (max-width:728px)";
 $desktop:"(min-width: 1024px)";
 
