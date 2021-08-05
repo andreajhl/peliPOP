@@ -8,7 +8,7 @@ export function  removeMovieFavorites(id) {
   
 export function getMovies(titulo) {
     return function(dispatch) {
-      return fetch("http://www.omdbapi.com/?apikey=20dac387&s=" + titulo)
+      return fetch("https://www.omdbapi.com/?apikey=20dac387&s=" + titulo)
         .then(response => response.json())
         .then(json => {
           dispatch({ type: "GET_MOVIES", payload: json });
@@ -17,7 +17,7 @@ export function getMovies(titulo) {
 }
 export function getMoviesDetail(id) {
     return function(dispatch) {
-      return fetch("http://www.omdbapi.com/?apikey=20dac387&i="+ id)
+      return fetch("https://www.omdbapi.com/?apikey=20dac387&i="+ id)
         .then(response => response.json())
         .then(json => {
           dispatch({ type: "GET_MOVIES_DETAIL", payload: json });
