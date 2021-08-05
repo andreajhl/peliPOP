@@ -5,7 +5,7 @@ import Logo from '../../logoHenry.png'
 
 import {getMovies} from '../../actions/index'
 
-import './Navbar.css';
+import '../../styles/NavBar.scss';
 
 export function NavBar({getMovies}) {
     const [state, setState]= useState({title:''})
@@ -21,29 +21,29 @@ export function NavBar({getMovies}) {
     }
 
     return (
-      <nav className="nav">
+      <div className="nav">
           <div className="form" >
-              <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
-              <div className="fm" >
-                  <button type="submit" className="btn" onClick={handleSubmit} >BUSCAR</button>
-                  <form >
-                      <input
-                      className='input'
-                      placeholder='titulo...'
-                      type="text"
-                      id="title"
-                      autoComplete="off"
-                      value={state.title}//te di el valor que tengo en mi estado
-                      onChange={handleChange}//escucha constantemente los cambios
-                      />
-                  </form> 
-              </div>
-          </div>
-          <div className="list">
-              <NavLink exact to="/"  className="a">Home</NavLink>
-              <NavLink to="/favs" className="a" >Favoritas</NavLink>
-          </div>
-      </nav>
+                <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
+                <div className="fm" >
+                    <button type="submit" className="btn" onClick={handleSubmit} >BUSCAR</button>
+                    <form >
+                        <input
+                        className='input'
+                        placeholder='titulo...'
+                        type="text"
+                        id="title"
+                        autoComplete="off"
+                        value={state.title}//te di el valor que tengo en mi estado
+                        onChange={handleChange}//escucha constantemente los cambios
+                        />
+                    </form> 
+                </div>
+            </div>
+            <div className="list">
+                <NavLink exact to="/"  className="a">Home</NavLink>
+                <NavLink to="/favs" className="a" >Favoritas</NavLink>
+            </div>
+      </div>
     )
 }
   

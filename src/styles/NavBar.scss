@@ -1,0 +1,70 @@
+@import 'global';
+
+.nav{
+    @include caja-flex(flex,row,space-between,center,nowrap);
+    margin: 0;
+    background-color: #D72323;
+    border-bottom: 4px solid black;
+    height: 90px;
+    width: 100%;
+    @media #{$smarphone}{
+        border-bottom: 2px solid black;
+    }
+}
+
+.form{
+    @include caja-flex (flex,row,space-around,center,nowrap);
+}
+.fm{
+    @include caja-flex (flex,row,center,center,nowrap);
+    margin-left: 20px;
+}
+.btn{
+    background-color: #3E3636;
+    border: 1px solid #3E3636;
+    border-radius: 2px;
+    color: #F5EDED;
+    min-width: 90px;
+    min-height: 39px;
+    font-size: 20px;
+    cursor: pointer;
+    @media #{$smarphone} {
+        min-width: 30px;
+        min-height: 25px;
+        font-size: 10px;
+    }
+}
+.btn:active{
+    background-color: black;
+    border: 1px solid black;
+    color: #F5EDED;
+}
+.input{
+    border-radius: 2px;
+    border: 1px solid #3E3636;
+    width: 280px;
+    min-height: 35px;
+    font-size: 16px;
+    @media #{$smarphone} {
+        width: 150px;
+        min-height: 20px;
+    }
+}
+
+.list{
+    @include caja-flex (flex,row,space-around,center,nowrap);
+}
+.a{
+    color: #F5EDED;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    @media #{$smarphone} {
+       font-size: 15px;
+    }
+}
+
+a:hover{
+    color: white;
+    text-shadow:  4px 8px 10px rgba(0, 0, 0, 0.644);
+}

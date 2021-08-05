@@ -16,7 +16,7 @@ export function Buscador ({movies, addMovieFavorite}){
                 <div key={movie.imdbID} className="movie_Container">
                   <div className='movie_Container_img'>
                     <button className="btnO" onClick={()=>{addMovieFavorite(movie)}}><HeartFilled className="i"/></button>
-                    <img className='movie_Container_img_1' src={movie.Poster} />
+                    <img className='movie_Container_img_I' src={movie.Poster} alt='poster de pelicula'/>
                   </div>
                   <div className='movie_Container_cuerpo'>
                      <Link to={`/movie/${movie.imdbID}`}  style={{textDecoration: 'none', color: 'rgb(245, 230, 202)'}}>

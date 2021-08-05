@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css'
+import './styles/App.scss'
 
 import Favorites from "./components/Favorites/Favorites";
 import Buscador from "./components/Buscador/Buscador";

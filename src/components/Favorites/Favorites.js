@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
  
@@ -10,14 +10,14 @@ import {CloseCircleOutlined} from '@ant-design/icons'
 export function ConnectedList ({moviesFavourites,removeMovieFavorite}) {
 
   return (
-    <div style={{ display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+    <div style={{ display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'} }>
       <div style={{width:'100%'}} className="movie">
           {
           moviesFavourites.map( movie =>(
             <div key={movie.imdbID} className="movie_Container">
                 <div className='movie_Container_img'>
                   <button className="btnO" onClick={()=>{removeMovieFavorite(movie.imdbID)}}><CloseCircleOutlined className="i"/></button>
-                  <img className='movie_Container_img_1' src={movie.Poster} />
+                  <img className='movie_Container_img_I' src={movie.Poster} alt='poster de pelicula' />
                 </div>
                 <div className='movie_Container_cuerpo'>
                     <Link to={`/movie/${movie.imdbID}`}  style={{textDecoration: 'none', color: 'rgb(245, 230, 202)'}}>

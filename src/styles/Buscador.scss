@@ -1,19 +1,11 @@
-$color1:#F5EDED;
-$color2:#D72323;
-$color3:#3E3636;
-$color4:black;
+@import 'global';
 
 .movie{
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include caja-flex (inline-flex,row,space-around,strech,wrap);
     margin: 40px;
 
     &_Container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include caja-flex(flex, column, center, center, nowrap);
         background-color: rgba(0, 0, 0, 0.747);
         max-width: 230px;
         min-width: 230px;
@@ -25,36 +17,30 @@ $color4:black;
         margin-right: 20px;
        
         &_img{
+            @include caja-flex (flex, column, center,center,nowrap);
             max-width: 230px;
             min-width: 230px;
             min-height: 300px;
             max-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             position:relative;
             border-left: 1px solid $color4;
             border-right: 1px solid $color4;
-            &_1{
+            &_I{
              width: 100%;
              height: 100%
             }
         }
 
         &_cuerpo{
+            @include caja-flex (flex, row, center,center,nowrap);
             max-width: 230px;
             min-width: 230px;
             min-height: 50px;
             max-height: 50px;
             font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
             border-left: 1px solid $color4;
             border-right: 1px solid $color4;
             overflow: hidden;
-           
         }
     }
 
@@ -94,6 +80,5 @@ $color4:black;
 
 .h4:active{
     color: $color2
-    
 }
 

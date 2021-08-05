@@ -1,54 +1,57 @@
-$color1:#F5EDED;
-$color2:#D72323;
-$color3:#3E3636;
-$color4:black;
-
+@import 'global';
 
 .movie-detail{
+    @include caja-flex (flex,row,center,center,nowrap);
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     border-left: 20px dotted $color2;
     border-right: 20px dotted $color2;
     border-bottom: 3px solid black;
     border-top: 3px solid black;
-    
+    @media #{$smarphone}{
+        width: 70%
+    }
+   
     &_img{
-        max-height: 400px;
-        min-height: 400px;
+        height: $heithImg;
         border-right:3px solid black;
+        @media #{$smarphone}{
+            width: 50%
+        }
     }
 
     &_cuerpo{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include caja-flex(flex,column,center,center,nowrap);
         background-color:rgba(0, 0, 0, 0.747);
-        min-height:400px; 
-        max-height:400px; 
+        height:$heithImg;
         color: $color1;
+        @media #{$smarphone}{
+            font-size: 14px;
+        }
 
-        &_i{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+        &_I{
+            @include caja-flex(flex,row,space-around,center,nowrap);
             font-size: 14px;
         }
     }
+
+    
 }
 
 .movie-det{
+    @include caja-flex(flex,columns, center, center, nowrap);
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
     max-width: 550px;
     min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border: 10px solid $color2;
     color: $color1;
     line-height: 180%;
+  
+}
+.h2{
+    margin:2px;
+     font-size: 20px;
+
+    @media #{$smarphone}{
+            font-size: 14px;;
+    }
 }
