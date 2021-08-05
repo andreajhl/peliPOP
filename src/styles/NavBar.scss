@@ -33,6 +33,11 @@
         min-height: 25px;
         font-size: 10px;
     }
+    @media #{$tablet} {
+        min-width: 30px;
+        min-height: 25px;
+        font-size: 10px;
+    }
 }
 .btn:active{
     background-color: black;
@@ -46,7 +51,11 @@
     min-height: 35px;
     font-size: 16px;
     @media #{$smarphone} {
-        width: 150px;
+        width: 100%;
+        min-height: 20px;
+    }
+    @media #{$tablet} {
+        width: 100%;
         min-height: 20px;
     }
 }
@@ -61,6 +70,9 @@
     font-size: 30px;
     @media #{$smarphone} {
        font-size: 15px;
+    }
+    @media #{$tablet} {
+        font-size: 20px;
     }
 }
 
