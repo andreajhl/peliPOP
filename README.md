@@ -1,4 +1,5 @@
-# APP WEATHER
+
+# PeliPop
 
  Esta aplicacion esta realizada usando la API de IMDB ,  se hace uso de React / Redux, en ella podes buscar peliculas por nombres, esto te traera una variedad de peliculas que contentan la palabra o el titulo completo que buscas, si quieres ver mas detalles como el ranking o un breve resumen solo debes de dar click sobre el nombre y te redirigira a sus detalles, tambien podes agregarlas a favoritos 
 <br>
