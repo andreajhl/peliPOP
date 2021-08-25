@@ -43,14 +43,14 @@
  Aca aparece la barra de busqueda, la pestaña de favoritos, y las tarjetas de las peliculas que vayas buscando; Esto lo podes hacer desde el input de busqueda como se muestra en el ejemplo
 <br>
 
-<img src="/home/andrea/Documentos/peliPOP/src/gif/search.gif" width="800" height="400" />
+<img src="src/gif/search.gif" width="800" height="400" />
 <br>
 <br>
 
  En caso de que quieras guardarla en favoritos para no perderla debes clickear el corazon, podes eliminarla cuando quieras
 <br>
 
-<img src="/home/andrea/Documentos/peliPOP/src/gif/addFav.gif" width="800" height="400" />
+<img src="src/gif/addFav.gif" width="800" height="400" />
 <br>
 <br>
 
@@ -61,7 +61,7 @@
  Al dar clikc en la tarjeta te saldran detalles adicionales de la pelicula, como rango, genero, año y un breve resumen
 <br>
 
-<img src="/home/andrea/Documentos/peliPOP/src/gif/details.gif" width="800" height="400" />
+<img src="src/gif/details.gif" width="800" height="400" />
 <br>
 <br>
 
