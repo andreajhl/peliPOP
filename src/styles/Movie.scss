@@ -1,36 +1,49 @@
 @import 'global';
 
 .movie-detail{
-    @include caja-flex (flex,row,center,center,nowrap);
-    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-    border-left: 20px dotted $color2;
-    border-right: 20px dotted $color2;
+    @include caja-flex (flex,row,space-between,center,nowrap);
+    height: 90vh;
+    margin-top: 40vh;
+    width: 80%;
     border-bottom: 3px solid black;
     border-top: 3px solid black;
+    box-shadow: 10px 10px 0px red;
     @media #{$smarphone}{
         width: 70%
     }
    
     &_img{
         height: $heithImg;
+        width: 40%;
         border-right:3px solid black;
-        @media #{$smarphone}{
-            width: 50%
-        }
     }
 
     &_cuerpo{
-        @include caja-flex(flex,column,center,center,nowrap);
+        @include caja-flex(flex,column,space-around,center,nowrap);
         background-color:rgba(0, 0, 0, 0.747);
         height:$heithImg;
         color: $color1;
+        font-size: 1.8rem;
+        width: 60%;
         @media #{$smarphone}{
-            font-size: 14px;
+            font-size: 1rem;
+            line-height: 150%;
+        }
+
+        &_plot{
+            @include caja-flex(flex,column,center,center,nowrap);
+            padding-left: 5%;
+            padding-right: 5%
         }
 
         &_I{
             @include caja-flex(flex,row,space-around,center,nowrap);
-            font-size: 14px;
+            width: 70%;
+            font-size: 1.5rem;
+            @media #{$smarphone}{
+                @include caja-flex(flex,column,center,center,nowrap);
+                font-size: 1rem;
+            }
         }
     }
 
@@ -49,9 +62,9 @@
 }
 .h2{
     margin:2px;
-     font-size: 20px;
+     font-size: 2rem;
 
     @media #{$smarphone}{
-            font-size: 14px;;
+            font-size: 1rem;
     }
 }

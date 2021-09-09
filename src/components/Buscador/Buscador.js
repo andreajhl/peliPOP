@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+import { useDispatch} from "react-redux";
 import { Link } from 'react-router-dom';
 
 import {addMovieFavorite} from '../../actions/index'
@@ -7,15 +7,16 @@ import {addMovieFavorite} from '../../actions/index'
 import '../../styles/Buscador.scss'
 import {HeartFilled} from '@ant-design/icons'
 
-export function Buscador ({movies, addMovieFavorite}){
+export default function Buscador ({movies}){
 
+const dispatch = useDispatch()
     return (
         <div className="movie">
             {
               movies && movies.map(movie =>(
                 <div key={movie.imdbID} className="movie_Container">
                   <div className='movie_Container_img'>
-                    <button className="btnO" onClick={()=>{addMovieFavorite(movie)}}><HeartFilled className="i"/></button>
+                    <button className="btnO" onClick={()=>{dispatch(addMovieFavorite(movie))}}><HeartFilled className="i"/></button>
                     <img className='movie_Container_img_I' src={movie.Poster} alt='poster de pelicula'/>
                   </div>
                   <div className='movie_Container_cuerpo'>
@@ -29,15 +30,4 @@ export function Buscador ({movies, addMovieFavorite}){
         </div> 
     );
 }
-
-function mapStateToProps(state) {
-  return {
-    movies: state.moviesLoaded
-  };//cooloco lo que quiero que se muestre en mi store en mi pantalla, aca tengo las peliculas que me pasa la api
-}
-
-export default connect(
-  mapStateToProps,  //esto une todo a redux en su buscador 
-  {addMovieFavorite}
-)(Buscador); 
 

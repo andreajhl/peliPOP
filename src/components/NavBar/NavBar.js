@@ -23,7 +23,7 @@ export function NavBar({getMovies}) {
     return (
       <div className="nav">
           <div className="form" >
-                <img id="logoHenry" src={Logo} width="30" height="30" className="d-inline-block align-top" alt="" />
+        
                 <div className="fm" >
                     <button type="submit" className="btn" onClick={handleSubmit} >BUSCAR</button>
                     <form >

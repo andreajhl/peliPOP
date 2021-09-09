@@ -1,7 +1,8 @@
 const initialState = {
     moviesFavourites: [],
     moviesLoaded: [],
-    movieDetail: {}
+    movieDetail: {},
+    render:false
  }
 
 export const Reducers= (state= initialState, action)=> {
@@ -9,8 +10,15 @@ export const Reducers= (state= initialState, action)=> {
         case "GET_MOVIES":
             return {
              ...state,
-             moviesLoaded: action.payload.Search
+             render:false,
+             moviesLoaded: action.payload
         }
+        case "GET_MOVIES_INICIO":
+            return{
+                ...state,
+                moviesLoaded:[action.payload,...state.moviesLoaded],
+                render:true
+            }
         case 'ADD_MOVIE_FAVORITE':
             var search=state.moviesFavourites.find(e=>e ===action.payload)
             return {

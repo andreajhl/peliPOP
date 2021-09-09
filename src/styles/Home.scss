@@ -1,0 +1,5 @@
+@import 'global';
+
+.home{
+    @include caja-flex(flex, column, center, center, nowrap);
+}

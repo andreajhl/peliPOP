@@ -18,12 +18,18 @@ export function Movie ({getMovieDetail,match,detail}) {
                 <div className="movie-detail">
                         <img className="movie-detail_img" src={detail.Poster} alt='poster de pelicula' />
                     <div className="movie-detail_cuerpo">
-                        <h2 className='h2' >{detail.Title} <label>{detail.imdbRating}</label></h2>
+                        <h2 className='h2' >{detail.Title} {detail.imdbRating}/10 </h2>
                         <div className="movie-detail_cuerpo_I">
-                            <p style={{margin:'4px'}}>{detail.Year}</p>
-                            <p style={{margin:'4px'}}>{detail.Genre}</p>
+                            <p>año: {detail.Year}</p>
+                            <p >Genero: {detail.Genre}</p>
                         </div>
-                        <p style={{marginLeft:'10px',marginRight:'10px', maxWidth:'250px',lineHeight:'150%'}}>{detail.Plot}</p>
+                        <div className="movie-detail_cuerpo_I">
+                          <p >Duracion : {detail.Runtime}</p>
+                          <p >Director : {detail.Director}</p>
+                        </div>
+                        <div className='movie-detail_cuerpo_plot'>
+                            <p>{detail.Plot}</p>
+                        </div>
                     </div>
                 </div>
             </div>

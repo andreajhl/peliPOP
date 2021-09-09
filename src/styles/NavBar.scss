@@ -29,7 +29,8 @@
 .btn{
     background-color: #3E3636;
     border: 1px solid #3E3636;
-    border-radius: 2px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     color: #F5EDED;
     min-width: 90px;
     min-height: 39px;
@@ -51,7 +52,7 @@
         min-height: 15px;
     }
 }
-.btn:active{
+.btn:hover{
     background-color: black;
     border: 1px solid black;
     color: #F5EDED;
@@ -62,6 +63,9 @@
     width: 280px;
     min-height: 35px;
     font-size: 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
     @media #{$smarmini} {
         min-height: 12px;
         width: 100%;
