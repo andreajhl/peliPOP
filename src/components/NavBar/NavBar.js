@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from "react-redux";
-import Logo from '../../logoHenry.png'
 
 import {getMovies} from '../../actions/index'
 
