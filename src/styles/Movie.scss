@@ -3,7 +3,8 @@
 .movie-detail{
     @include caja-flex (flex,row,space-between,center,nowrap);
     height: 90vh;
-    margin-top: 40vh;
+    margin-top: 40%;
+    margin-bottom: 30%;
     width: 80%;
     border-bottom: 3px solid black;
     border-top: 3px solid black;
@@ -26,14 +27,24 @@
         font-size: 1.8rem;
         width: 60%;
         @media #{$smarphone}{
-            font-size: 1rem;
+            font-size: 1.5ex;
+            line-height: 150%;
+        }
+        @media #{$tablet}{
+            font-size: 1.65ex;
             line-height: 150%;
         }
 
         &_plot{
             @include caja-flex(flex,column,center,center,nowrap);
             padding-left: 5%;
-            padding-right: 5%
+            padding-right: 5%;
+            @media #{$smarphone}{
+                font-size: 1.5ex;
+            }
+            @media #{$tablet}{
+                font-size: 1.7ex;
+            }
         }
 
         &_I{
@@ -42,7 +53,11 @@
             font-size: 1.5rem;
             @media #{$smarphone}{
                 @include caja-flex(flex,column,center,center,nowrap);
-                font-size: 1rem;
+                font-size: 1.5ex;
+            }
+            @media #{$tablet}{
+                font-size: 1.7ex;
+                width: 87%
             }
         }
     }
@@ -58,6 +73,10 @@
     border: 10px solid $color2;
     color: $color1;
     line-height: 180%;
+    @media #{$smarphone}{
+        line-height: 120%;
+    }
+
   
 }
 .h2{
@@ -65,6 +84,9 @@
      font-size: 2rem;
 
     @media #{$smarphone}{
-            font-size: 1rem;
+            font-size: 1.5ex;
+    }
+    @media #{$tablet}{
+        font-size: 2.5ex;
     }
 }

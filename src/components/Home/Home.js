@@ -46,7 +46,7 @@ export default function Home () {
 
     return (
         <div className='home'>
-            {render && <h1 id='titulo1'>Peliculas con mejor Ranking</h1>}
+            {render && <h1 id='titulo1' className='tituloranking'>Peliculas con mejor Ranking</h1>}
             <Buscador movies={state}/>
         </div>
     )
