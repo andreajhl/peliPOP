@@ -6,7 +6,10 @@
 
 .tituloranking{
     justify-content: center;
+    color: white;
+    text-shadow: 2px 1px 5px black;
     @media #{$smarphone}{
         font-size: 2.5ex;
+        text-shadow: 2px 1px 3px black;
     }
 }

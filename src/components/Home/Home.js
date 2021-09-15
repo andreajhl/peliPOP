@@ -29,24 +29,11 @@ export default function Home () {
         fetchData()
     }, [state,dispatch])
 
-    setTimeout(() => {
-        var titulo= document.getElementById('titulo1')
-        if(titulo) {
-           if(color){
-               titulo.style.color='white'
-               titulo.style.textShadow='2px 1px 5px black'
-               setcolor(false)
-           }else{
-               titulo.style.color='white'
-               titulo.style.textShadow='2px 1px 5px black'
-               setcolor(true)
-           }
-        }
-    }, 500);
+  
 
     return (
         <div className='home'>
-            {render && <h1 id='titulo1' className='tituloranking'>Peliculas con mejor Ranking</h1>}
+            {render && <h1  className='tituloranking'>Peliculas con mejor Ranking</h1>}
             <Buscador movies={state}/>
         </div>
     )
