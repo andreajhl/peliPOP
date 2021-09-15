@@ -34,11 +34,11 @@ export default function Home () {
         if(titulo) {
            if(color){
                titulo.style.color='white'
-               titulo.style.textShadow='2px 1px 0px black'
+               titulo.style.textShadow='2px 1px 5px black'
                setcolor(false)
            }else{
                titulo.style.color='white'
-               titulo.style.textShadow='2px 1px 0px rgb(226, 46, 46)'
+               titulo.style.textShadow='2px 1px 5px black'
                setcolor(true)
            }
         }
